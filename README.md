@@ -1,4 +1,5 @@
 
+
 # Documentación de Endpoints - Proyecto EPIC
 
 ## Descripción del Proyecto
@@ -6,8 +7,14 @@
 Esta es una API RESTful desarrollada con FastAPI para gestionar una aplicación de reservas de habitaciones. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) tanto para habitaciones como para reservas. Las habitaciones pueden ser de tipo simple, doble o suite, y cada una tiene un precio por noche. Las reservas incluyen el nombre del huésped, la fecha de inicio y fin de la reserva, y están asociadas a una habitación específica.
 
 ## Características 
-- **Gestión de Habitaciones** - Crear, leer, actualizar y eliminar habitaciones. - Cada habitación tiene un número, tipo (simple, doble, suite), precio por noche, y disponibilidad. 
-- **Gestión de Reservas** - Crear, leer, actualizar y eliminar reservas. - Cada reserva incluye el nombre del huésped, la fecha de inicio y fin de la reserva, y la habitación asociada. - Validación de disponibilidad de la habitación antes de crear una reserva. - Validación para evitar conflictos de fechas en las reservas. 
+- **Gestión de Habitaciones** 
+- Crear, leer, actualizar y eliminar habitaciones. 
+- Cada habitación tiene un número, tipo (simple, doble, suite), precio por noche, y disponibilidad. 
+- **Gestión de Reservas** 
+-  Crear, leer, actualizar y eliminar reservas. 
+-  Cada reserva incluye el nombre del huésped, la fecha de inicio y fin de la reserva, y la habitación asociada. 
+-  Validación de disponibilidad de la habitación antes de crear una reserva. 
+- Validación para evitar conflictos de fechas en las reservas. 
 ## Requisitos 
 - Python 3.8+ 
 - FastAPI 
