@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from database.main import engine, Base
-from api.endpoints import room, reservation
+from api.routes import room, reservation
 import logging
 
 Base.metadata.create_all(bind=engine)

@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from datetime import date
 from typing import Optional,Literal
 
@@ -22,6 +22,14 @@ class ReservationBase(BaseModel):
     start_date: date
     end_date: date
     room_id: int
+   
+    # Validador que se encarga de la fecha de inicio sea menor a la fecha de fin
+    @validator('end_date')
+    def end_date_must_be_after_start_date(cls, end_date, values):
+        start_date = values.get('start_date')
+        if start_date and end_date < start_date:
+            raise ValueError('End date must be after start date')
+        return end_date
 
 class ReservationCreate(ReservationBase):
     pass
